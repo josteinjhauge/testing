@@ -2,7 +2,6 @@
 include_once 'View/minNavigasjon.php';
 ?>
 <br/><br/>
-<!-- test-->
 <div class="container">
     <br/><br/>
     <h4>Velkommen til TestingBank</h4>
