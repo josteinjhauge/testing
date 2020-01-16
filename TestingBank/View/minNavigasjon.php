@@ -24,7 +24,7 @@
         </div>
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="/TestingBank/View/loggInnAdmin.php">Admin</a></li>
+              <li><a href="/testing/TestingBank/View/loggInnAdmin.php">Admin</a></li>
           </ul>
         </div>
       </div>  
