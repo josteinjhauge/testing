@@ -1,5 +1,7 @@
 <?php
+include_once '../Model/domeneModell.php';
 
+include_once '../BLL/adminLogikk.php';
 function testEndreKundeInfo_OK(){
         // arrange
         $admin = new Admin(new AdminDBStub());
