@@ -2,6 +2,8 @@
 include_once '../Model/domeneModell.php';
 
 include_once '../BLL/adminLogikk.php';
+
+class endreKundeInfoTest extends PHPUnit\Framework\TestCase {
 function testEndreKundeInfo_OK(){
         // arrange
         $admin = new Admin(new AdminDBStub());
@@ -52,4 +54,6 @@ function testEndreKundeInfo_Feil(){
         $Feil = $admin->endreKundeInfo($kunde);
         //assert
         $this->assertEquals("Feil",$Feil);
+}
+
 }

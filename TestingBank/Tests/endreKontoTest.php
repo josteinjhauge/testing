@@ -2,6 +2,7 @@
 include_once '../Model/domeneModell.php';
 
 include_once '../BLL/adminLogikk.php';
+class endreKontoTest extends PHPUnit\Framework\TestCase {
 function testEndreKonto_OK(){
     // arrange
         $admin = new Admin(new AdminDBStub());
@@ -18,4 +19,4 @@ function testEndreKonto_OK(){
         //assert
         $this->assertEquals("OK",$OK);
 }
-
+}

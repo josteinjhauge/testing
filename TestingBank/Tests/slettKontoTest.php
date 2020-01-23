@@ -2,6 +2,8 @@
 include_once '../Model/domeneModell.php';
 
 include_once '../BLL/adminLogikk.php';
+
+class slettKontoTest extends PHPUnit\Framework\TestCase {
 function testSlettKonto_OK(){
     // arrange
         $admin = new Admin(new AdminDBStub());
@@ -19,3 +21,4 @@ function testSlettKonto_OK(){
         $this->assertEquals("OK",$OK);
 }
 
+}

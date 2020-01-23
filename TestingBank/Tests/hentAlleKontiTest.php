@@ -2,6 +2,8 @@
 include_once '../Model/domeneModell.php';
 
 include_once '../BLL/adminLogikk.php';
+
+class hentAlleKontiTest extends PHPUnit\Framework\TestCase {
 function testHentAlleKonti_OK(){
     // arrange
         $admin = new Admin(new AdminDBStub());
@@ -31,3 +33,4 @@ function testHentAlleKonti_OK(){
         
 }
 
+}

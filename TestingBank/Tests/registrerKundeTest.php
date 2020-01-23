@@ -2,6 +2,8 @@
 include_once '../Model/domeneModell.php';
 
 include_once '../BLL/adminLogikk.php';
+
+class registrerKundeTest extends PHPUnit\Framework\TestCase {
 function testRegistrerKunde_OK(){
         // arrange
         $admin = new Admin(new AdminDBStub());
@@ -73,4 +75,6 @@ function testRegistrerKunde_Feil_personnr(){
         $Feil = $admin->registrerKunde($kunde);
         //assert
         $this->assertEquals("Feil",$Feil);
+}
+
 }

@@ -2,6 +2,8 @@
 include_once '../Model/domeneModell.php';
 
 include_once '../BLL/adminLogikk.php';
+
+class hentAlleKunderTest extends PHPUnit\Framework\TestCase {
 function testHentAlleKunder()
     {   
         // arrange
@@ -33,3 +35,4 @@ function testHentAlleKunder()
         $this->assertEquals("99889988",$kunder[2]->telefonnr); 
         $this->assertEquals("HeiHei",$kunder[2]->passord);
     }
+}
