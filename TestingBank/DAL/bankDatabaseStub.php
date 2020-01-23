@@ -66,16 +66,29 @@
            }   
         }
        
-        //hør med tor om stappe array med object av konto eller bare nummer
-        //hør hva vi skal gjøre med personnummer, eller om det holder slik som nå
-        //send inn 3 forskjellige personnummer og avhengig av personnummeret, så returneres 0, 1 og 3 konti'er
         function hentKonti($personnummer){
-            $konti = [];
-            $konti[] = "12121212121";
-            $konti[] = "13131313131";
-            $konti[] = "22222222222";
+            if($personnummer == "000000000000"){
+                $konti = [];
             
-            return $konti;
+                return $konti;
+            }
+            if ($personnummer == "11111111111"){
+                $konti = [];
+                $konti[] = "12121212121";
+            
+                return $konti;
+            }
+            if ($personnummer == "33333333333") {
+                $konti = [];
+                $konti[] = "12121212121";
+                $konti[] = "13131313131";
+                $konti[] = "14141414141";
+            
+                return $konti;
+            }
+            else {
+                return "Personnummer finnes ikke";
+            }
         }
         
         function hentSaldi($personnummer){
