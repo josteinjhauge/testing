@@ -119,14 +119,8 @@
         }
        
         function registrerBetaling($kontoNr, $transaksjon){
-            $transaksjon = new transaksjon();
-            $transaksjon->fraTilKontonummer = "11111111111";
-            $transaksjon->belop = 200;
-            $transaksjon->dato = "2015-03-14";
-            $transaksjon->melding = "dingDing";
-            $transaksjon->avventer = true;
-            
-            if($transaksjon ==! null){
+           
+            if($transaksjon ==! null && $kontoNr ==! null){
                 return "OK";
             }
             else{
