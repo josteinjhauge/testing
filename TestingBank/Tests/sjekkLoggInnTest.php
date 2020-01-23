@@ -18,8 +18,8 @@ class sjekkLoggInnTest extends PHPUnit\Framework\TestCase {
     
     public function testSjekkLoggInn_Feil() {
         // arrange
-        $passord = "passord";
-        $personnummer = "12345678911";       
+        $passord = "feilpassord";
+        $personnummer = "feil12345678911";       
         $bank = new Bank(new BankDBStub());
         // act
         $OK = $bank->sjekkLoggInn($personnummer, $passord);

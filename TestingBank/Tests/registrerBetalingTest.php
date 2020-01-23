@@ -1,8 +1,40 @@
 <?php
+include_once '../Model/domeneModell.php';
+//include_once '../DAL/databaseStub.php';
+include_once '../BLL/bankLogikk.php';
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+class registrerBetalingTest extends PHPUnit\Framework\TestCase {
+    
+    public function testregistrerBetaling_OK() {
+        // arrange
+        $transaksjon = new transaksjon();
+        $transaksjon->fraTilKontonummer = "11111111111";
+        $transaksjon->belop = 200;
+        $transaksjon->dato = "2015-03-14";
+        $transaksjon->melding = "dingDing";
+        $transaksjon->avventer = true;
+        
+        $bank = new Bank(new BankDBStub());
+        // act
+        
+        // assert
+        
+    }
+    
+    public function testregistrerBetaling_Feil() {
+        // arrange
+        $transaksjon = new transaksjon();
+        $transaksjon->fraTilKontonummer = "11111111111";
+        $transaksjon->belop = 200;
+        $transaksjon->dato = "2015-03-14";
+        $transaksjon->melding = "dingDing";
+        $transaksjon->avventer = true;
+        
+        $bank = new Bank(new BankDBStub());
+        // act
+        
+        // assert
+        
+    }
+    
+}

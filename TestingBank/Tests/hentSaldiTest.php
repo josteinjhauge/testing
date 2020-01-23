@@ -10,7 +10,7 @@ class hentSaldiTest extends PHPUnit\Framework\TestCase {
         $personnummer = "12345678911";
         $bank = new Bank(new BankDBStub());
         // act
-        $saldi = $bank->hentKonti($personnummer);
+        $saldi = $bank->hentSaldi($personnummer);
         // assert
         $this->assertEquals(1000,$saldi[0]);
         $this->assertEquals(100,$saldi[1]);
