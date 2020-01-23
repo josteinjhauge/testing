@@ -87,4 +87,47 @@
             }
             return $konto;
         }
+        
+        function sjekkLoggInn($personnummer, $passord){
+     
+           if($passord == "passord" && $personnummer == "12345678911"){
+               return "OK";
+           }
+           else{
+               return "Feil";
+           }   
+        }
+       
+        //hør med tor om stappe array med object av konto eller bare nummer
+        function hentKonti($personnummer){
+            $konti = [];
+            $konti[] = "12121212121";
+            $konti[] = "13131313131";
+            $konti[] = "22222222222";
+            
+            return $konti;
+        }
+        
+        function hentSaldi($personnummer){
+            $saldi = [];
+            
+            $saldi[] = 1000;
+            $saldi[] = 100;
+            $saldi[] = 200;
+            
+            return $saldi;
+        }
+       
+        function registrerBetaling($kontoNr, $transaksjon){
+           
+            if($transaksjon ==! null && $kontoNr ==! null){
+                return "OK";
+            }
+            else{
+                return "Feil";
+            }
+            
+        }
+        
+        
     }
