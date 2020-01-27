@@ -100,7 +100,6 @@
        
         //hør med tor om stappe array med object av konto eller bare nummer
         //hør hva vi skal gjøre med personnummer, eller om det holder slik som nå
-        //send inn 3 forskjellige personnummer og avhengig av personnummeret, så returneres 0, 1 og 3 konti'er
         function hentKonti($personnummer){
             $konti = [];
             $konti[] = "12121212121";
@@ -130,38 +129,41 @@
         }
         
         function hentBetalinger($personnummer){
-           
-            $betalinger = [];
-            $transaksjon1 = new transaksjon();
-            $transaksjon1->fraTilKontonummer = "11111111111";
-            $transaksjon1->belop = 200;
-            $transaksjon1->dato = "2015-03-14";
-            $transaksjon1->melding = "dingDing";
-            $transaksjon1->avventer = "1";
-            $betalinger[] = $transaksjon1;
-
-            $transaksjon2 = new transaksjon();
-            $transaksjon2->fraTilKontonummer = "11111122222";
-            $transaksjon2->belop = 212;
-            $transaksjon2->dato = "2020-05-14";
-            $transaksjon2->melding = "hei";
-            $transaksjon2->avventer = "1";
-            $betalinger[] = $transaksjon2;
-            
-            $transaksjon3 = new transaksjon();
-            $transaksjon3->fraTilKontonummer = "11222222222";
-            $transaksjon3->belop = 122;
-            $transaksjon3->dato = "2021-12-14";
-            $transaksjon3->melding = "Test";
-            $transaksjon3->avventer = "1";
-            $betalinger[] = $transaksjon3;
-               
+           if($personnummer == "123"){
+                $transaksjon1 = new transaksjon();
+                $transaksjon1->fraTilKontonummer = "11111111111";
+                $transaksjon1->belop = 200;
+                $transaksjon1->dato = "2015-03-14";
+                $transaksjon1->melding = "dingDing";
+                $transaksjon1->avventer = "1";
+                
+                $transaksjon2 = new transaksjon();
+                $transaksjon2->fraTilKontonummer = "11111122222";
+                $transaksjon2->belop = 212;
+                $transaksjon2->dato = "2020-05-14";
+                $transaksjon2->melding = "hei";
+                $transaksjon2->avventer = "1";
+                
+                $transaksjon3 = new transaksjon();
+                $transaksjon3->fraTilKontonummer = "11222222222";
+                $transaksjon3->belop = 122;
+                $transaksjon3->dato = "2021-12-14";
+                $transaksjon3->melding = "Test";
+                $transaksjon3->avventer = "1";
+                
+                $konto1 = new konto();
+                $konto1->transaksjoner[] = $transaksjon1;
+                $konto1->transaksjoner[] = $transaksjon2;
+                $konto1->transaksjoner[] = $transaksjon3;
+            }
             return 0;
+          
+            
            
         }
 
 
-        /*function hentBetalinger($personnummer)
+       /* function hentBetalinger($personnummer)
     {
         // hent alle betalinger for kontonummer som avventer betaling (lik 1)
         $sql = "Select * from Transaksjon Join Konto On "

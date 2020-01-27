@@ -117,6 +117,7 @@ class BankDB
         {
             $betalinger[]=$rad;
         }
+        console.log($betalinger);
         return $betalinger;
     }
     
