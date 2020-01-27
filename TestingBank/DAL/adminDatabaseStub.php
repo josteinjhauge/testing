@@ -171,11 +171,11 @@ include_once '../Model/domeneModell.php';
                 
             }
             
-            function slettKonto ($kontonummer)
+            function slettKonto ($konto)
             {
-                 $kontonummerSlett = "12345678910";
+                 $kontonummerSlett = "12345";
                 
-                if ($kontonummer == $kontonummerSlett)
+                if ($konto->kontonummer == $kontonummerSlett)
                 {
                     return "OK";
                 }

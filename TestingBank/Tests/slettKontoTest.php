@@ -13,7 +13,7 @@ function testSlettKonto_OK(){
         $konto->kontonummer = "12345";
         $konto->saldo= "100";
         $konto->type = "type";
-        $konto->valuta = "Nok";
+        $konto->valuta = "NOK";
         $konto->transaksjoner = array(); // av transaksjon
         // act
         $OK = $admin->slettKonto($konto);
