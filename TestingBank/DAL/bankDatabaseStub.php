@@ -190,5 +190,25 @@
                 return "Feil";
             }
         }
+        
+        function hentKundeInfo($personnummer)
+        {
+            $kunde = new kunde();
+            
+            $kunde->personnummer = "11111222222";
+            $kunde->fornavn = "Roger";
+            $kunde->etternavn = "Ruud";
+            $kunde->adresse = "Gata 1, Brasil";
+            $kunde->telefonnr = "87654321";
+            $kunde->passord = "Passord123";
+            $kunde->postnr = "2040";
+            
+            if($personnummer == "11111222222"){
+                return $kunde;
+            }
+            else {
+                return "Feil";
+            }
+        }
  
     }
