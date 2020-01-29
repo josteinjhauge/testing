@@ -67,37 +67,40 @@
         }
        
         function hentKonti($personnummer){
+            $konti = [];
+            
             if($personnummer == "000000000000"){
-                $konti = [];
-            
-                return $konti;
             }
-            if ($personnummer == "11111111111"){
-                $konti = [];
+            elseif ($personnummer == "11111111111"){
                 $konti[] = "12121212121";
-            
-                return $konti;
             }
-            if ($personnummer == "33333333333") {
-                $konti = [];
-                $konti[] = "12121212121";
+            elseif ($personnummer == "33333333333") {
                 $konti[] = "13131313131";
                 $konti[] = "14141414141";
-            
-                return $konti;
+                $konti[] = "15151515151";
             }
             else {
                 return "Personnummer finnes ikke";
             }
+            return $konti;
         }
         
         function hentSaldi($personnummer){
             $saldi = [];
             
-            $saldi[] = 1000;
-            $saldi[] = 100;
-            $saldi[] = 200;
-            
+            if($personnummer == "000000000000"){
+            }
+            elseif ($personnummer == "11111111111"){
+                $saldi[] = 10;
+            }
+            elseif ($personnummer == "33333333333") {
+                $saldi[] = 100;
+                $saldi[] = 200;
+                $saldi[] = 300;
+            }
+            else {
+                return "Personnummer finnes ikke";
+            }
             return $saldi;
         }
        
