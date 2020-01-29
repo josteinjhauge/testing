@@ -111,7 +111,7 @@
         }
         
         function hentBetalinger($personnummer){
-           if($personnummer == "123"){
+           if($personnummer == "1" || "2" || "4"){
                 $transaksjon1 = new transaksjon();
                 $transaksjon1->fraTilKontonummer = "11111111111";
                 $transaksjon1->belop = 200;
@@ -134,30 +134,58 @@
                 $transaksjon3->avventer = "1";
                 
                 $konto1 = new konto();
+                $konto1->kontonummer = "123";
+                $konto1->saldo = "100";
+                $konto1->type = "type";
+                $konto1->valuta = "NOK";
+                $konto1->personnummer = $personnummer;
+                
                 $konto1->transaksjoner[] = $transaksjon1;
                 $konto1->transaksjoner[] = $transaksjon2;
                 $konto1->transaksjoner[] = $transaksjon3;
+                
+                $konto2 = new konto();
+                $konto2->kontonummer = "123";
+                $konto2->saldo = "100";
+                $konto2->type = "type";
+                $konto2->valuta = "NOK";
+                $konto2->personnummer = $personnummer;
+                $konto2->transaksjoner = array();
+                
+                $konto3 = new konto();
+                $konto3->kontonummer = "123";
+                $konto3->saldo = "100";
+                $konto3->type = "type";
+                $konto3->valuta = "NOK";
+                $konto3->personnummer = $personnummer;
+                $konto3->transaksjoner[] = $transaksjon1;
+                
+                if($personnummer == "1"){
+                    //persNr 1 har alt
+                    return $konto1->transaksjoner;
+                }
+                if ($personnummer =="2"){
+                    //persNr 2 har konto, men ingen transaksjoner
+                    return $konto2->transaksjoner;
+                }
+                if($personnummer == "4"){
+                    //persNr 4 har konto og en transaksjon
+                    return $konto3->transaksjoner;
+                }
             }
-            return 0;
-          
-            
-           
-        }
+            if($personnummer =="3"){
+               return "Ingen konto";
+            }
+            return null;
 
-
-       /* function hentBetalinger($personnummer)
-    {
-        // hent alle betalinger for kontonummer som avventer betaling (lik 1)
-        $sql = "Select * from Transaksjon Join Konto On "
-                . "Transaksjon.Kontonummer = Konto.Kontonummer Where "
-                . "Personnummer='$personnummer'"
-                . "AND Avventer='1' Order By Transaksjon.Kontonummer";
-        $resultat = $this->db->query($sql);
-        $betalinger = array();
-        while($rad = $resultat->fetch_object())
-        {
-            $betalinger[]=$rad;
         }
-        return $betalinger;
-    } */
+        function utforBetaling($TxID){
+            if($TxID == "1"){
+                return "OK";
+            }
+            else{
+                return "Feil";
+            }
+        }
+ 
     }

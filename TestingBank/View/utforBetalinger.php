@@ -61,5 +61,6 @@ include_once 'navigasjon.php';
 <div class="container">
     <br/><br/>
     <h2>Utfør betalinger</h2>
+    
     <div id="listBetalinger"></div>
 </div>

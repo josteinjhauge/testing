@@ -10,7 +10,7 @@ function testRegistrerKonto_OK(){
         $konto = new konto();
         
         $konto->personnummer = "12345678910";
-        $konto->kontonummer = "12345";
+        $konto->kontonummer = "12345678910";
         $konto->saldo= "100";
         $konto->type = "type";
         $konto->valuta = "Nok";
@@ -25,7 +25,7 @@ function testRegistrerKonto_Feil(){
         $admin = new Admin(new AdminDBStub());
         $konto = new konto();
         
-        $konto->personnummer = "";
+        $konto->personnummer = "12345678911";
         $konto->kontonummer = "12345";
         $konto->saldo= "100";
         $konto->type = "type";
@@ -36,5 +36,6 @@ function testRegistrerKonto_Feil(){
         //assert
         $this->assertEquals("Feil",$Feil);
 }
+
 
 }
