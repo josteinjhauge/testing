@@ -25,12 +25,12 @@ class Bank
     
     function sjekkLoggInn($personnummer,$passord)
     {
-        if(!preg_match("/[0-9]{11}/", $personnummer))
+        if(!preg_match("/^[0-9]{11}$/", $personnummer))
         {
             return "Feil i personnummer";
         }
         
-        if(!preg_match("/.{6,30}/", $passord))
+        if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,20}$/", $passord))
         {
             return "Feil i passord";
         }

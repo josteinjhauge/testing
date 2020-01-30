@@ -64,7 +64,7 @@
         
         function sjekkLoggInn($personnummer, $passord){
      
-           if($passord == "passord" && $personnummer == "12345678911"){
+           if($passord == "Passord1!" && $personnummer == "12345678911"){
                return "OK";
            }
            else{
