@@ -1,5 +1,6 @@
 <?php
 include_once '../Model/domeneModell.php';
+
 class BankDB
 {
     private $db;
@@ -50,6 +51,7 @@ class BankDB
         $konto->transaksjoner=$transaksjoner;
         return $konto;
     }
+    
     function sjekkLoggInn($personnummer,$passord)
     {
         $sql = "Select * from Kunde Where personnummer = '$personnummer' AND "
@@ -65,6 +67,7 @@ class BankDB
             return "Feil";
         }    
     }
+    
     function hentKonti($personnummer)
     {
         $sql = "Select Distinct Kontonummer from Konto Where Personnummer ='$personnummer'";
@@ -167,6 +170,7 @@ class BankDB
         $this->db->rollback();
         return "Feil";
     }
+    
     function endreKundeInfo($kunde)
     {
         $this->db->autocommit(false);

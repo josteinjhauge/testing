@@ -1,5 +1,6 @@
 <?php
 include_once '../Model/domeneModell.php';
+
 class AdminDBStub
 {
     function hentAlleKunder()
@@ -83,6 +84,7 @@ class AdminDBStub
             return "Feil";
         }
     }
+    
     function slettKunde ($personnummer)
     {
         $personnummerSlett = "12345678910";
@@ -115,6 +117,7 @@ class AdminDBStub
         {
             return "Feil";
         }
+        
         if ($konto->kontonummer == null)
         {
             return "Feil";

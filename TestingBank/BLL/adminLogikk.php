@@ -1,6 +1,7 @@
 <?php
 include_once '../DAL/adminDatabase.php';
 include_once '../DAL/adminDatabaseStub.php';
+
 class Admin
 {
     private $db;
@@ -51,11 +52,13 @@ class Admin
         $OK = $this->db->endreKonto($konto);
         return $OK;
     }
+    
     function hentAlleKonti()
     {
         $konti = $this->db->hentAlleKonti();
         return $konti;
     }
+    
     function slettKonto($kontonummer)
     {
         $OK = $this->db->slettKonto($kontonummer);

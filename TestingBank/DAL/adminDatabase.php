@@ -1,5 +1,6 @@
 <?php
 include_once '../Model/domeneModell.php';
+
 class AdminDB
 {
     private $db;
@@ -14,6 +15,7 @@ class AdminDB
         $sql = "Select * from Kunde Left Join Poststed On Kunde.postnr = Poststed.postnr ";
         $resultat = $this->db->query($sql);
         $kunder = array();
+        
         while($rad = $resultat->fetch_object())
         {
             $kunder[]=$rad;
@@ -27,17 +29,20 @@ class AdminDB
         // Sjekk om nytt postnr ligger i Poststeds-tabellen, dersom ikke legg det inn
         $sql = "Select * from Poststed Where Postnr = '$kunde->postnr'";
         $resultat = $this->db->query($sql);
+        
         if($this->db->affected_rows!=1)
         {
             // ligger ikke i poststedstabellen 
             $sql = "Insert Into Poststed (Postnr, Poststed) Values ('$kunde->postnr','$kunde->poststed')";
             $resultat = $this->db->query($sql);
+            
             if($this->db->affected_rows < 1)
             {
                 $this->db->rollback();
                 return "Feil";
             }
         }
+        
         // oppdater Kunde-tabellen
         $sql =  "Update Kunde Set Fornavn = '$kunde->fornavn', Etternavn = '$kunde->etternavn',";
         $sql .= " Adresse = '$kunde->adresse', Postnr = '$kunde->postnr',";
@@ -54,11 +59,13 @@ class AdminDB
         // Sjekk om nytt postnr ligger i Poststeds-tabellen, dersom ikke legg det inn
         $sql = "Select * from Poststed Where Postnr = '$kunde->postnr'";
         $resultat = $this->db->query($sql);
+        
         if($this->db->affected_rows!=1)
         {
             // ligger ikke i poststedstabellen 
             $sql = "Insert Into Poststed (Postnr, Poststed) Values ('$kunde->postnr','$kunde->poststed')";
             $resultat = $this->db->query($sql);
+            
             if($this->db->affected_rows < 1)
             {
                 $this->db->rollback();
@@ -70,6 +77,7 @@ class AdminDB
         $sql .= "Values ('$kunde->personnummer','$kunde->fornavn','$kunde->etternavn',"
                 . "'$kunde->adresse','$kunde->postnr','$kunde->telefonnr','$kunde->passord')";
         $resultat = $this->db->query($sql);
+        
         if($this->db->affected_rows==1)
         {
             $this->db->commit();
@@ -86,6 +94,7 @@ class AdminDB
     {
         $sql = "Delete From Kunde Where Personnummer = '$personnummer'";
         $resultat = $this->db->query($sql);
+        
         if($this->db->affected_rows==1)
         {
             return "OK";
@@ -100,15 +109,18 @@ class AdminDB
     {
         $sql = "Select * from Kunde Where Personnummer = '$konto->personnummer'";
         $resultat = $this->db->query($sql);
+        
         if($this->db->affected_rows!=1)
         {
             echo json_encode("Feil i personnummer");
             die();
         }
+        
         $sql = "Insert into Konto (Personnummer, Kontonummer, Saldo, Type, Valuta)";
         $sql .= "Values ('$konto->personnummer','$konto->kontonummer','$konto->saldo',"
                 . "'$konto->type','$konto->valuta')";
         $resultat = $this->db->query($sql);
+        
         if($this->db->affected_rows==1)
         {
             return "OK";
@@ -123,6 +135,7 @@ class AdminDB
     {
         $sql = "Select * from Kunde Where Personnummer = '$konto->personnummer'";
         $resultat = $this->db->query($sql);
+        
         if($this->db->affected_rows!=1)
         {
             echo json_encode("Feil i personnummer");
@@ -130,6 +143,7 @@ class AdminDB
         }
         $sql = "Select * from Konto Where Kontonummer = '$konto->kontonummer'";
         $resultat = $this->db->query($sql);
+        
         if($this->db->affected_rows!=1)
         {
             echo json_encode("Feil i kontonummer");
@@ -149,16 +163,19 @@ class AdminDB
         $sql = "Select * from Konto";
         $resultat = $this->db->query($sql);
         $konti=array();
+        
         while($rad = $resultat->fetch_object())
         {
             $konti[]=$rad;
         }
         return $konti;
     }
+    
     function slettKonto($kontonummer)
     {
         $sql = "Delete from Konto Where Kontonummer = '$kontonummer'";
         $resultat = $this->db->query($sql);
+        
         if($this->db->affected_rows!=1)
         {
             echo json_encode("Feil kontonummer");

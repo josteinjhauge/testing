@@ -1,5 +1,6 @@
 <?php
     include_once '../Model/domeneModell.php';
+    
     class BankDBStub
     {
         function hentTransaksjoner($kontoNr,$fraDato,$tilDato)
@@ -7,21 +8,26 @@
             date_default_timezone_set("Europe/Oslo");
             $fraDato = strtotime($fraDato);
             $tilDato = strtotime($tilDato);
+            
             if($fraDato>$tilDato)
             {
                 return "Fra dato må være større enn tildato";
             }
+            
             $konto = new konto();
             $konto->personnummer="010101234567";
             $konto->kontonummer=$kontoNr;
             $konto->type="Sparekonto";
             $konto->saldo =2300.34;
             $konto->valuta="NOK";
+            
             if($tilDato < strtotime('2015-03-26'))
             {
                 return $konto;
             }
+            
             $dato = $fraDato;
+            
             while ($dato<=$tilDato)
             {
                 switch($dato)
@@ -167,10 +173,12 @@
                     //persNr 1 har alt
                     return $konto1->transaksjoner;
                 }
+                
                 if ($personnummer =="2"){
                     //persNr 2 har konto, men ingen transaksjoner
                     return $konto2->transaksjoner;
                 }
+                
                 if($personnummer == "4"){
                     //persNr 4 har konto og en transaksjon
                     return $konto3->transaksjoner;
@@ -182,6 +190,7 @@
             return null;
 
         }
+        
         function utforBetaling($TxID){
             if($TxID == "1"){
                 return "OK";
