@@ -105,7 +105,7 @@ class AdminDB
         }    
     }
     
-    function registerKonto($konto)
+    function registrerKonto($konto)
     {
         $sql = "Select * from Kunde Where Personnummer = '$konto->personnummer'";
         $resultat = $this->db->query($sql);
