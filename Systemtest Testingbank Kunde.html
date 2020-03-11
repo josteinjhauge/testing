@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Systemtest Testingbank Kunde</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LoggInn</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost/testing/TestingBank/Index.php<datalist><option>http://localhost/testing/TestingBank/Index.php</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Logg inn<datalist><option>link=Logg inn</option><option>//a[contains(text(),'Logg inn')]</option><option>//a[contains(@href, 'View/loggInn.php')]</option><option>//div[2]/a</option><option>css=a.btn.btn-success</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=personNr<datalist><option>id=personNr</option><option>//input[@id='personNr']</option><option>//input</option><option>css=#personNr</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=personNr<datalist><option>id=personNr</option><option>//input[@id='personNr']</option><option>//input</option><option>css=#personNr</option></datalist></td><td>01010110523</td>
+</tr>
+<tr><td>type</td><td>id=passord<datalist><option>id=passord</option><option>//input[@id='passord']</option><option>//div[2]/div/input</option><option>css=#passord</option></datalist></td><td>Passord1!</td>
+</tr>
+<tr><td>click</td><td>id=loggInn<datalist><option>id=loggInn</option><option>//button[@id='loggInn']</option><option>//div[2]/button</option><option>css=#loggInn</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
