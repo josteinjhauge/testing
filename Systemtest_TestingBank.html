@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-	<title>Systemtest Testingbank </title>
+	<title>Systemtest_TestingBank</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -14,6 +14,16 @@
 <tr><td>open</td><td>http://localhost/testing/TestingBank/InitDB.php<datalist><option>http://localhost/testing/TestingBank/InitDB.php</option><option>/testing/TestingBank/InitDB.php</option></datalist></td><td></td>
 </tr>
 <tr><td>pause</td><td>1000<datalist><option>1000</option></datalist></td><td></td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">LoggUt</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost/testing/TestingBank/View/saldo.php<datalist><option>http://localhost/testing/TestingBank/Index.php</option><option>http://localhost/testing/TestingBank/View/saldo.php</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Logg ut<datalist><option>link=Logg ut</option><option>//a[contains(text(),'Logg ut')]</option><option>//div[@id='navbar-main']/ul[2]/li/a</option><option>//a[contains(@href, '../API/loggUt.php')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -650,10 +660,6 @@
 <tr><td>open</td><td>http://localhost/testing/TestingBank/View/adminEndreKonto.php<datalist><option>http://localhost/testing/TestingBank/View/adminEndreKonto.php</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>link=Endre kunde<datalist><option>link=Endre kunde</option><option>//a[contains(text(),'Endre kunde')]</option><option>//div[@id='navbar-main']/ul/li[2]/a</option><option>//a[contains(@href, 'adminKunde.php')]</option><option>//li[2]/a</option></datalist></td><td></td>
-</tr>
-<tr><td></td><td><datalist><option></option></datalist></td><td></td>
-</tr>
-<tr><td></td><td><datalist><option></option></datalist></td><td></td>
 </tr>
 </tbody></table>
 </body>
