@@ -125,6 +125,8 @@
 </tr>
 <tr><td>click</td><td>id=endre<datalist><option>id=endre</option><option>//button[@id='endre']</option><option>//div[2]/button</option><option>css=#endre</option></datalist></td><td></td>
 </tr>
+<tr><td></td><td><datalist><option></option></datalist></td><td></td>
+</tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
@@ -224,6 +226,10 @@
 <tr><td>type</td><td>id=adresse1<datalist><option>id=adresse1</option><option>//input[@id='adresse1']</option><option>//div[@id='listKunde']/table/tbody/tr/td[4]/input</option><option>//td[4]/input</option><option>css=#adresse1</option></datalist></td><td>Test 22</td>
 </tr>
 <tr><td>type</td><td>id=postnr1<datalist><option>id=postnr1</option><option>//input[@id='postnr1']</option><option>//div[@id='listKunde']/table/tbody/tr/td[5]/input</option><option>//td[5]/input</option><option>css=#postnr1</option></datalist></td><td>1010</td>
+</tr>
+<tr><td>click</td><td>link=Endre<datalist><option>link=Endre</option><option>xpath=(//a[contains(text(),'Endre')])[3]</option><option>//a[@onclick='endreKunde(1)']</option><option>//div[@id='listKunde']/table/tbody/tr/td[9]/a</option><option>//td[9]/a</option><option>css=a.btn.btn-success</option></datalist></td><td></td>
+</tr>
+<tr><td>assertTextNotPresent</td><td>//div[@id='listKunde']/table/tbody/tr/td[5]/input<datalist><option>id=postnr1</option><option>//input[@id='postnr1']</option><option>//div[@id='listKunde']/table/tbody/tr/td[5]/input</option><option>//td[5]/input</option><option>css=#postnr1</option></datalist></td><td>1010</td>
 </tr>
 <tr><td>type</td><td>id=poststed1<datalist><option>id=poststed1</option><option>//input[@id='poststed1']</option><option>//div[@id='listKunde']/table/tbody/tr/td[6]/input</option><option>//td[6]/input</option><option>css=#poststed1</option></datalist></td><td>Test</td>
 </tr>
