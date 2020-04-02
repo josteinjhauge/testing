@@ -229,6 +229,8 @@
 </tr>
 <tr><td>click</td><td>link=Utfør betalinger<datalist><option>link=Utfør betalinger</option><option>//a[contains(text(),'Utfør betalinger')]</option><option>//div[@id='navbar-main']/ul/li[3]/a</option><option>//a[contains(@href, '../View/utforBetalinger.php')]</option><option>//li[3]/a</option></datalist></td><td></td>
 </tr>
+<tr><td>assertValue</td><td>//div[@id='listBetalinger']/table/tbody/tr/td[1]<datalist><option>//div[@id='listBetalinger']/table/tbody/tr/td</option><option>//td</option><option>css=td</option><option>//div[@id='listBetalinger']/table/tbody/tr/td[1]</option></datalist></td><td>22334412345</td>
+</tr>
 <tr><td>click</td><td>//div[@id='listBetalinger']/table/tbody/tr/td[6]/button<datalist><option>//div[@id='listBetalinger']/table/tbody/tr/td[6]/button</option><option>//td[6]/button</option><option>css=button.btn.btn-success</option></datalist></td><td></td>
 </tr>
 </tbody></table>
@@ -876,6 +878,8 @@
 <tr><td>open</td><td>http://localhost/testing/TestingBank/View/adminEndreKonto.php<datalist><option>http://localhost/testing/TestingBank/View/adminEndreKonto.php</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>link=Endre kunde<datalist><option>link=Endre kunde</option><option>//a[contains(text(),'Endre kunde')]</option><option>//div[@id='navbar-main']/ul/li[2]/a</option><option>//a[contains(@href, 'adminKunde.php')]</option><option>//li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=personnummer1<datalist><option>id=personnummer1</option><option>//input[@id='personnummer1']</option><option>//div[@id='listKunde']/table/tbody/tr/td/input</option><option>//input</option><option>css=#personnummer1</option></datalist></td><td>01010110532</td>
 </tr>
 </tbody></table>
 </body>
