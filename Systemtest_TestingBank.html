@@ -229,7 +229,7 @@
 </tr>
 <tr><td>click</td><td>link=Utfør betalinger<datalist><option>link=Utfør betalinger</option><option>//a[contains(text(),'Utfør betalinger')]</option><option>//div[@id='navbar-main']/ul/li[3]/a</option><option>//a[contains(@href, '../View/utforBetalinger.php')]</option><option>//li[3]/a</option></datalist></td><td></td>
 </tr>
-<tr><td>assertValue</td><td>//div[@id='listBetalinger']/table/tbody/tr/td[1]<datalist><option>//div[@id='listBetalinger']/table/tbody/tr/td</option><option>//td</option><option>css=td</option><option>//div[@id='listBetalinger']/table/tbody/tr/td[1]</option></datalist></td><td>22334412345</td>
+<tr><td>assertText</td><td>//div[@id='listBetalinger']/table/tbody/tr/td[1]<datalist><option>//div[@id='listBetalinger']/table/tbody/tr/td</option><option>//td</option><option>css=td</option><option>//div[@id='listBetalinger']/table/tbody/tr/td[1]</option></datalist></td><td>22334412345</td>
 </tr>
 <tr><td>click</td><td>//div[@id='listBetalinger']/table/tbody/tr/td[6]/button<datalist><option>//div[@id='listBetalinger']/table/tbody/tr/td[6]/button</option><option>//td[6]/button</option><option>css=button.btn.btn-success</option></datalist></td><td></td>
 </tr>
@@ -242,6 +242,8 @@
 <tr><td>open</td><td>http://localhost/testing/TestingBank/View/utforBetalinger.php<datalist><option>http://localhost/testing/TestingBank/View/utforBetalinger.php</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>link=Saldo<datalist><option>link=Saldo</option><option>//a[contains(text(),'Saldo')]</option><option>//div[@id='navbar-main']/ul/li/a</option><option>//a[contains(@href, '../View/saldo.php')]</option><option>//li/a</option><option>css=li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//div[@id='listSaldi']/table/tbody/tr/td<datalist><option>//div[@id='listSaldi']/table/tbody/tr/td</option><option>//td</option><option>css=td</option></datalist></td><td>105010123456</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -266,6 +268,8 @@
 <tr><td>assertValue</td><td>id=passord<datalist><option>id=passord</option></datalist></td><td>Admin</td>
 </tr>
 <tr><td>click</td><td>id=loggInn<datalist><option>id=loggInn</option><option>//input[@id='loggInn']</option><option>//form/input</option><option>css=#loggInn</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=personnummer1<datalist><option>id=personnummer1</option><option>//input[@id='personnummer1']</option><option>//div[@id='listKunde']/table/tbody/tr/td/input</option><option>//input</option><option>css=#personnummer1</option></datalist></td><td>01010110523</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -403,6 +407,8 @@
 </tr>
 <tr><td>click</td><td>id=regKunde<datalist><option>id=regKunde</option><option>//button[@id='regKunde']</option><option>//div[2]/button</option><option>css=#regKunde</option></datalist></td><td></td>
 </tr>
+<tr><td>assertValue</td><td>id=passord2<datalist><option>id=passord2</option><option>//input[@id='passord2']</option><option>//div[@id='listKunde']/table/tbody/tr[2]/td[8]/input</option><option>//tr[2]/td[8]/input</option><option>css=#passord2</option></datalist></td><td>Admin</td>
+</tr>
 <tr><td>click</td><td>link=Registrer kunde<datalist><option>link=Registrer kunde</option><option>//a[contains(text(),'Registrer kunde')]</option><option>//div[@id='navbar-main']/ul/li/a</option><option>//a[contains(@href, 'adminRegisterKunde.php')]</option><option>//li/a</option><option>css=li &gt; a</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>id=personnummer<datalist><option>id=personnummer</option><option>//input[@id='personnummer']</option><option>//input</option><option>css=#personnummer</option></datalist></td><td></td>
@@ -452,6 +458,8 @@
 <tr><td>assertValue</td><td>id=passord<datalist><option>id=passord</option></datalist></td><td>Admin</td>
 </tr>
 <tr><td>click</td><td>id=regKunde<datalist><option>id=regKunde</option><option>//button[@id='regKunde']</option><option>//div[2]/button</option><option>css=#regKunde</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=fornavn2<datalist><option>id=fornavn2</option><option>//input[@id='fornavn2']</option><option>//div[@id='listKunde']/table/tbody/tr[2]/td[2]/input</option><option>//tr[2]/td[2]/input</option><option>css=#fornavn2</option></datalist></td><td>007</td>
 </tr>
 <tr><td>click</td><td>link=Registrer kunde<datalist><option>link=Registrer kunde</option><option>//a[contains(text(),'Registrer kunde')]</option><option>//div[@id='navbar-main']/ul/li/a</option><option>//a[contains(@href, 'adminRegisterKunde.php')]</option><option>//li/a</option><option>css=li &gt; a</option></datalist></td><td></td>
 </tr>
@@ -505,6 +513,8 @@
 </tr>
 <tr><td>click</td><td>id=regKunde<datalist><option>id=regKunde</option><option>//button[@id='regKunde']</option><option>//div[2]/button</option><option>css=#regKunde</option></datalist></td><td></td>
 </tr>
+<tr><td>assertValue</td><td>id=etternavn3<datalist><option>id=etternavn3</option></datalist></td><td>1</td>
+</tr>
 <tr><td>click</td><td>link=Registrer kunde<datalist><option>link=Registrer kunde</option><option>//a[contains(text(),'Registrer kunde')]</option><option>//div[@id='navbar-main']/ul/li/a</option><option>//a[contains(@href, 'adminRegisterKunde.php')]</option><option>//li/a</option><option>css=li &gt; a</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>id=personnummer<datalist><option>id=personnummer</option><option>//input[@id='personnummer']</option><option>//input</option><option>css=#personnummer</option></datalist></td><td></td>
@@ -552,6 +562,8 @@
 <tr><td>assertValue</td><td>id=passord<datalist><option>id=passord</option></datalist></td><td>Admin</td>
 </tr>
 <tr><td>click</td><td>id=regKunde<datalist><option>id=regKunde</option><option>//button[@id='regKunde']</option><option>//div[2]/button</option><option>css=#regKunde</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=adresse8<datalist><option>id=adresse8</option><option>//input[@id='adresse8']</option><option>//div[@id='listKunde']/table/tbody/tr[8]/td[4]/input</option><option>//tr[8]/td[4]/input</option><option>css=#adresse8</option></datalist></td><td>1</td>
 </tr>
 <tr><td>click</td><td>link=Registrer kunde<datalist><option>link=Registrer kunde</option><option>//a[contains(text(),'Registrer kunde')]</option><option>//div[@id='navbar-main']/ul/li/a</option><option>//a[contains(@href, 'adminRegisterKunde.php')]</option><option>//li/a</option><option>css=li &gt; a</option></datalist></td><td></td>
 </tr>
@@ -752,6 +764,8 @@
 <tr><td>assertValue</td><td>id=passord<datalist><option>id=passord</option></datalist></td><td>Admin</td>
 </tr>
 <tr><td>click</td><td>id=regKunde<datalist><option>id=regKunde</option><option>//button[@id='regKunde']</option><option>//div[2]/button</option><option>css=#regKunde</option></datalist></td><td></td>
+</tr>
+<tr><td>assertValue</td><td>id=personnummer6<datalist><option>id=personnummer6</option></datalist></td><td>12345123456</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
