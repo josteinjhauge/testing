@@ -69,6 +69,8 @@
 </tr>
 <tr><td>click</td><td>id=loggInn<datalist><option>id=loggInn</option><option>//button[@id='loggInn']</option><option>//div[2]/button</option><option>css=#loggInn</option></datalist></td><td></td>
 </tr>
+<tr><td>assertText</td><td>id=personNr<datalist><option>id=personNr</option><option>//div[@id='personNr']</option><option>//div[3]/div</option><option>css=#personNr</option></datalist></td><td>Saldo for personnummer 01010110523</td>
+</tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
@@ -219,6 +221,8 @@
 </tr>
 <tr><td>click</td><td>id=regBetaling<datalist><option>id=regBetaling</option><option>//button[@id='regBetaling']</option><option>//div[2]/button</option><option>css=#regBetaling</option></datalist></td><td></td>
 </tr>
+<tr><td>assertText</td><td>//h2<datalist><option>//h2</option><option>css=h2</option></datalist></td><td>Utfør betalinger</td>
+</tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
@@ -233,6 +237,8 @@
 </tr>
 <tr><td>click</td><td>//div[@id='listBetalinger']/table/tbody/tr/td[6]/button<datalist><option>//div[@id='listBetalinger']/table/tbody/tr/td[6]/button</option><option>//td[6]/button</option><option>css=button.btn.btn-success</option></datalist></td><td></td>
 </tr>
+<tr><td>assertText</td><td>//div[@id='listBetalinger']/table/thead/tr/th[5]<datalist><option>//div[@id='listBetalinger']/table/thead/tr/th[5]</option><option>//th[5]</option></datalist></td><td>Melding</td>
+</tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
@@ -244,6 +250,8 @@
 <tr><td>click</td><td>link=Saldo<datalist><option>link=Saldo</option><option>//a[contains(text(),'Saldo')]</option><option>//div[@id='navbar-main']/ul/li/a</option><option>//a[contains(@href, '../View/saldo.php')]</option><option>//li/a</option><option>css=li &gt; a</option></datalist></td><td></td>
 </tr>
 <tr><td>assertText</td><td>//div[@id='listSaldi']/table/tbody/tr/td<datalist><option>//div[@id='listSaldi']/table/tbody/tr/td</option><option>//td</option><option>css=td</option></datalist></td><td>105010123456</td>
+</tr>
+<tr><td>assertText</td><td>id=personNr<datalist><option>id=personNr</option><option>//div[@id='personNr']</option><option>//div[3]/div</option><option>css=#personNr</option></datalist></td><td>Saldo for personnummer 01010110523</td>
 </tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
@@ -857,6 +865,8 @@
 </tr>
 <tr><td>click</td><td>link=Endre konto<datalist><option>link=Endre konto</option><option>//a[contains(text(),'Endre konto')]</option><option>//div[@id='navbar-main']/ul/li[4]/a</option><option>//a[contains(@href, 'adminEndreKonto.php')]</option><option>//li[4]/a</option></datalist></td><td></td>
 </tr>
+<tr><td>assertText</td><td>//h2<datalist><option>//h2</option><option>css=h2</option></datalist></td><td>Endre konto</td>
+</tr>
 </tbody></table>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
@@ -893,7 +903,7 @@
 </tr>
 <tr><td>click</td><td>link=Endre kunde<datalist><option>link=Endre kunde</option><option>//a[contains(text(),'Endre kunde')]</option><option>//div[@id='navbar-main']/ul/li[2]/a</option><option>//a[contains(@href, 'adminKunde.php')]</option><option>//li[2]/a</option></datalist></td><td></td>
 </tr>
-<tr><td>assertValue</td><td>id=personnummer1<datalist><option>id=personnummer1</option><option>//input[@id='personnummer1']</option><option>//div[@id='listKunde']/table/tbody/tr/td/input</option><option>//input</option><option>css=#personnummer1</option></datalist></td><td>01010110532</td>
+<tr><td>assertValue</td><td>id=etternavn1<datalist><option>id=personnummer1</option><option>//input[@id='personnummer1']</option><option>//div[@id='listKunde']/table/tbody/tr/td/input</option><option>//input</option><option>css=#personnummer1</option><option>id=etternavn1</option></datalist></td><td>test</td>
 </tr>
 </tbody></table>
 </body>
